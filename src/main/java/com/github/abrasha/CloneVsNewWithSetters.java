@@ -5,11 +5,11 @@ import org.openjdk.jmh.infra.Blackhole;
 
 import java.util.concurrent.TimeUnit;
 
-//# Run complete. Total time: 00:01:00
+// Run complete.
 //
-//  Benchmark                       Mode  Cnt   Score   Error  Units
-//  CloneVsNewWithSetters.viaClone  avgt   10  10.041 ± 0.059  ns/op
-//  CloneVsNewWithSetters.viaNew    avgt   10   7.617 ± 0.113  ns/op
+// Benchmark                       Mode  Cnt   Score   Error  Units
+// CloneVsNewWithSetters.viaClone  avgt   10  10.041 ± 0.059  ns/op
+// CloneVsNewWithSetters.viaNew    avgt   10   7.617 ± 0.113  ns/op
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
