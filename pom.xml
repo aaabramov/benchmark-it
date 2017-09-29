@@ -2,17 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.sample</groupId>
-    <artifactId>test</artifactId>
-    <version>1.0</version>
+    <groupId>com.github.abrasha</groupId>
+    <artifactId>benchmark-it</artifactId>
+    <version>0.1</version>
     <packaging>jar</packaging>
 
-    <name>JMH benchmark sample: Java</name>
-
-    <!--
-       This is the demo/sample template build script for building Java benchmarks with JMH.
-       Edit as needed.
-    -->
+    <name>Most popular java measurements in JMH</name>
 
     <dependencies>
         <dependency>
@@ -30,20 +25,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!--
-            JMH version to use with this project.
-          -->
         <jmh.version>1.19</jmh.version>
-
-        <!--
-            Java source/target to use for compilation.
-          -->
         <javac.target>1.8</javac.target>
-
-        <!--
-            Name of the benchmark Uber-JAR to generate.
-          -->
         <uberjar.name>benchmarks</uberjar.name>
     </properties>
 
