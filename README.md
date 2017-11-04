@@ -1,5 +1,5 @@
 # benchmark-it
-Performance measurements for common code samples
+Performance measurements for common code samples ![benchmark-it-build-status](https://travis-ci.org/Abrasha/benchmark-it.svg?branch=feature%2Ftravis-support)
 
 ## Adding new benchmark
 Find the following official examples of using JMH: [org/openjdk/jmh/samples/](http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/)
@@ -44,4 +44,12 @@ Benchmark                             Mode  Cnt          Score           Error  
 StringConcat.concatWithStringBuffer   avgt   10     209801.407 ±      2555.216  ns/op
 StringConcat.concatWithStringBuilder  avgt   10     206855.786 ±      1913.781  ns/op
 StringConcat.concatWithStringConcat   avgt   10  259190789.987 ± 262685019.287  ns/op
+```
+
+Iterating collection:
+```
+Benchmark                             Mode  Cnt    Score    Error  Units
+HashMapVSLinkedHashMap.hashMap        avgt    9  101.183 ±  7.116  ns/op
+HashMapVSLinkedHashMap.hashtable      avgt    9  242.710 ± 88.953  ns/op
+HashMapVSLinkedHashMap.linkedHashMap  avgt    9  150.633 ± 15.713  ns/op
 ```
