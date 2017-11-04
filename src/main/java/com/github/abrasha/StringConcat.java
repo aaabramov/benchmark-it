@@ -6,7 +6,7 @@ import org.openjdk.jmh.infra.Blackhole;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-// # Run complete.
+// Run complete.
 //
 // Benchmark                             Mode  Cnt          Score           Error  Units
 // StringConcat.concatWithStringBuffer   avgt   10     209801.407 ±      2555.216  ns/op

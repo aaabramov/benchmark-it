@@ -6,7 +6,7 @@ import org.openjdk.jmh.infra.Blackhole;
 import java.lang.reflect.Constructor;
 import java.util.concurrent.TimeUnit;
 
-// # Run complete.
+// Run complete.
 //
 // Benchmark                                            Mode  Cnt   Score     Error   Units
 // ConstructorVsReflection.createPersonWithConstructor  avgt    9   5.323   ± 0.233   ns/op
