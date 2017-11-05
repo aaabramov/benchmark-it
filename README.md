@@ -68,3 +68,10 @@ Benchmark                      Mode   Cnt    Score   Error  Units
 IntegerParsing.integerParse    avgt    9    23.314 ± 1.402  ns/op
 IntegerParsing.integerValueOf  avgt    9    25.892 ± 0.758  ns/op
 ```
+
+`Integer.valueOf(int)` for cached `Integer`s.
+```
+Benchmark                         Mode  Cnt  Score   Error  Units
+IntegerAutoBoxCache.getCached     avgt    9  2.869 ± 0.094  ns/op
+IntegerAutoBoxCache.getNonCached  avgt    9  3.997 ± 0.107  ns/op
+```
