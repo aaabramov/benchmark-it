@@ -9,7 +9,7 @@ Also you can take a look at my own measurements. The simplest is [StringConcat.j
 
 ## Running benchmarks
 
-Then you can use [run-benchmarks.sh](https://github.com/Abrasha/benchmark-it/blob/master/run-benchmarks.sh) script to execute benchmarks (You have to have maven been installed):
+Then you can use [run-benchmarks.sh](https://github.com/Abrasha/benchmark-it/blob/master/run-benchmarks.sh) script to execute benchmarks (You need to have maven been installed):
 ```bash
 ./run-benchmarks.sh "com.github.abrasha.StringConcat"
 ```
@@ -52,4 +52,19 @@ Benchmark                             Mode  Cnt    Score    Error  Units
 HashMapVSLinkedHashMap.hashMap        avgt    9  101.183 ±  7.116  ns/op
 HashMapVSLinkedHashMap.hashtable      avgt    9  242.710 ± 88.953  ns/op
 HashMapVSLinkedHashMap.linkedHashMap  avgt    9  150.633 ± 15.713  ns/op
+```
+
+Should we do manual boxing / unboxing?
+
+```
+Benchmark                          Mode   Cnt  Score   Error  Units
+AutoboxingVsManual.autoUnboxing    avgt    9   2.338 ± 0.047  ns/op
+AutoboxingVsManual.manualUnboxing  avgt    9   2.316 ± 0.088  ns/op
+```
+
+How we should parse `int` from `String`?
+```
+Benchmark                      Mode   Cnt    Score   Error  Units
+IntegerParsing.integerParse    avgt    9    23.314 ± 1.402  ns/op
+IntegerParsing.integerValueOf  avgt    9    25.892 ± 0.758  ns/op
 ```
