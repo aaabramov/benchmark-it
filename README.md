@@ -75,3 +75,10 @@ Benchmark                         Mode  Cnt  Score   Error  Units
 IntegerAutoBoxCache.getCached     avgt    9  2.869 ± 0.094  ns/op
 IntegerAutoBoxCache.getNonCached  avgt    9  3.997 ± 0.107  ns/op
 ```
+
+Proxy vs. Non-Proxy class:
+```
+Benchmark                 Mode   Cnt  Score   Error  Units
+ProxyVsNonProxy.nonProxy  avgt    9  72.668 ± 4.351  ns/op
+ProxyVsNonProxy.proxy     avgt    9  71.439 ± 1.857  ns/op
+```
