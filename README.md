@@ -16,21 +16,21 @@ Then you can use [run-benchmarks.sh](https://github.com/Abrasha/benchmark-it/blo
 
 ## Existing benchmarks:
 
-Cloning VS creating new objects:
+Cloning v. creating new objects:
 ```
 Benchmark                       Mode  Cnt   Score   Error  Units
 CloneVsNewWithSetters.viaClone  avgt   10  10.041 ± 0.059  ns/op
 CloneVsNewWithSetters.viaNew    avgt   10   7.617 ± 0.113  ns/op
 ```
 
-Reflection VS direct constructor call:
+Reflection v. direct constructor call:
 ```
 Benchmark                                            Mode  Cnt   Score     Error   Units
 ConstructorVsReflection.createPersonWithConstructor  avgt    9   5.323   ± 0.233   ns/op
 ConstructorVsReflection.createPersonWithReflection   avgt    9  12.911   ± 1.476   ns/op
 ```
 
-HashMap VS LinkedHashMap VS Hashtable as local property storage (10 sequential insertions):
+HashMap v. LinkedHashMap v. Hashtable as local property storage (10 sequential insertions):
 ```
 Benchmark                             Mode  Cnt    Score    Error  Units
 HashMapVSLinkedHashMap.hashMap        avgt    9  101.183 ±  7.116  ns/op
@@ -38,7 +38,7 @@ HashMapVSLinkedHashMap.hashtable      avgt    9  242.710 ± 88.953  ns/op
 HashMapVSLinkedHashMap.linkedHashMap  avgt    9  150.633 ± 15.713  ns/op
 ```
 
-String concatenation VS StringBuilder VS StringBuffer:
+String concatenation v. StringBuilder v. StringBuffer:
 ```
 Benchmark                             Mode  Cnt          Score           Error  Units
 StringConcat.concatWithStringBuffer   avgt   10     209801.407 ±      2555.216  ns/op
@@ -76,14 +76,14 @@ IntegerAutoBoxCache.getCached     avgt    9  2.869 ± 0.094  ns/op
 IntegerAutoBoxCache.getNonCached  avgt    9  3.997 ± 0.107  ns/op
 ```
 
-Proxy vs. Non-Proxy class:
+Proxy v. Non-Proxy class:
 ```
 Benchmark                 Mode   Cnt  Score   Error  Units
 ProxyVsNonProxy.nonProxy  avgt    9  72.668 ± 4.351  ns/op
 ProxyVsNonProxy.proxy     avgt    9  71.439 ± 1.857  ns/op
 ```
 
-`String#startsWith(xxx)` vs. `Pattern.compile("xxx.*")`:
+`String#startsWith(xxx)` v. `Pattern.compile("xxx.*")`:
 ```
 Benchmark                                    Mode   Cnt  Score   Error  Units
 RegexVsStartsWith.startsWith                 avgt    9   5.404 ± 0.188  ns/op
