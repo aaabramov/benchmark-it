@@ -82,3 +82,11 @@ Benchmark                 Mode   Cnt  Score   Error  Units
 ProxyVsNonProxy.nonProxy  avgt    9  72.668 ± 4.351  ns/op
 ProxyVsNonProxy.proxy     avgt    9  71.439 ± 1.857  ns/op
 ```
+
+`String#startsWith(xxx)` vs. `Pattern.compile("xxx.*")`:
+```
+Benchmark                                    Mode   Cnt  Score   Error  Units
+RegexVsStartsWith.startsWith                 avgt    9   5.404 ± 0.188  ns/op
+RegexVsStartsWith.usingRegex                 avgt    9  88.533 ± 6.107  ns/op
+RegexVsStartsWith.usingRegexWithStartAndEnd  avgt    9  48.726 ± 1.669  ns/op
+```
