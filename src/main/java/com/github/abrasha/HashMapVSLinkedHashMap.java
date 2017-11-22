@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 // HashMapVSLinkedHashMap.hashMap        avgt    9  101.183 ±  7.116  ns/op
 // HashMapVSLinkedHashMap.hashtable      avgt    9  242.710 ± 88.953  ns/op
 // HashMapVSLinkedHashMap.linkedHashMap  avgt    9  150.633 ± 15.713  ns/op
-
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class HashMapVSLinkedHashMap {
