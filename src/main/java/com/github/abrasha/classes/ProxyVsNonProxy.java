@@ -1,4 +1,4 @@
-package com.github.abrasha;
+package com.github.abrasha.classes;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;

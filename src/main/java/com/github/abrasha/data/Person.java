@@ -1,4 +1,4 @@
-package com.github.abrasha;
+package com.github.abrasha.data;
 
 import java.util.Objects;
 
@@ -15,19 +15,19 @@ public class Person implements Cloneable {
     public Person() {
     }
     
-    String getName() {
+    public String getName() {
         return name;
     }
     
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
     
-    int getAge() {
+    public int getAge() {
         return age;
     }
     
-    void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
     

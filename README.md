@@ -4,14 +4,14 @@ Performance measurements for common code samples ![benchmark-it-build-status](ht
 ## Adding new benchmark
 Find the following official examples of using JMH: [org/openjdk/jmh/samples/](http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/)
 
-Also you can take a look at my own measurements. The simplest is [StringConcat.java](https://github.com/Abrasha/benchmark-it/blob/master/src/main/java/com/github/abrasha/StringConcat.java). It demonstrates why we actually need classes like `StringBuilder`.
+Also you can take a look at my own measurements. The simplest is [StringConcat.java](https://github.com/Abrasha/benchmark-it/blob/master/src/main/java/com/github/abrasha/strings/StringConcat.java). It demonstrates why we actually need classes like `StringBuilder`.
 
 
 ## Running benchmarks
 
 Then you can use [run-benchmarks.sh](https://github.com/Abrasha/benchmark-it/blob/master/run-benchmarks.sh) script to execute benchmarks (You need to have maven been installed):
 ```bash
-./run-benchmarks.sh "com.github.abrasha.StringConcat"
+./run-benchmarks.sh "com.github.abrasha.strings.StringConcat"
 ```
 
 ## Existing benchmarks:
@@ -89,4 +89,18 @@ Benchmark                                    Mode   Cnt  Score   Error  Units
 RegexVsStartsWith.startsWith                 avgt    9   5.404 ± 0.188  ns/op
 RegexVsStartsWith.usingRegex                 avgt    9  88.533 ± 6.107  ns/op
 RegexVsStartsWith.usingRegexWithStartAndEnd  avgt    9  48.726 ± 1.669  ns/op
+```
+
+`String#matches(xxx)` v. `Pattern.compile(xxx).matcher(yyy).matches()`
+```
+Benchmark                                  Mode   Cnt   Score    Error  Units
+RegexMatcherVsStringMatches.regexMatcher   avgt    9   86.363 ±  3.194  ns/op
+RegexMatcherVsStringMatches.stringMatcher  avgt    9  304.525 ± 17.621  ns/op
+```
+
+Creating new `Cipher` v. using `ThreadLocal<Cipher>`
+```
+Benchmark                       Mode  Cnt     Score     Error  Units
+CryptoInit.withAvailableCipher  avgt    9   134.556 ±   6.433  ns/op
+CryptoInit.withNewCipher        avgt    9  6483.068 ± 234.472  ns/op
 ```

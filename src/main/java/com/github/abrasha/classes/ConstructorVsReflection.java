@@ -1,5 +1,6 @@
-package com.github.abrasha;
+package com.github.abrasha.classes;
 
+import com.github.abrasha.data.Person;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
