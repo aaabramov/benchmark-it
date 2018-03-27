@@ -16,8 +16,8 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 // Run complete.
 //
 // Benchmark                       Mode  Cnt     Score     Error  Units
-// CryptoInit.withAvailableCipher  avgt    9   134.556 ±   6.433  ns/op
-// CryptoInit.withNewCipher        avgt    9  6483.068 ± 234.472  ns/op
+// CryptoInit.withAvailableCipher  avgt   30  1795.563 ±  37.173  ns/op
+// CryptoInit.withNewCipher        avgt   30  6979.507 ± 144.121  ns/op
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class CryptoInit {
