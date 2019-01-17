@@ -1,4 +1,4 @@
-package com.github.abrasha.crypto;
+package com.github.aaabramov.crypto;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;

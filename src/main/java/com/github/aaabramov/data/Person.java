@@ -1,4 +1,4 @@
-package com.github.abrasha.data;
+package com.github.aaabramov.data;
 
 import java.util.Objects;
 

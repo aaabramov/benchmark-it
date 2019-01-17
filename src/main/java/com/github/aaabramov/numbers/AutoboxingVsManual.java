@@ -1,4 +1,4 @@
-package com.github.abrasha.numbers;
+package com.github.aaabramov.numbers;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;

@@ -1,4 +1,4 @@
-package com.github.abrasha;
+package com.github.aaabramov;
 
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;

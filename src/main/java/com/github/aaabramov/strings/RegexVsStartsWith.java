@@ -1,4 +1,4 @@
-package com.github.abrasha.strings;
+package com.github.aaabramov.strings;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
