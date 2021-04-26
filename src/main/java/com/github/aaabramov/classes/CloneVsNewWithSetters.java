@@ -6,11 +6,12 @@ import org.openjdk.jmh.infra.Blackhole;
 
 import java.util.concurrent.TimeUnit;
 
-// Run complete.
-//
-// Benchmark                       Mode  Cnt   Score   Error  Units
-// CloneVsNewWithSetters.viaClone  avgt   10  10.041 ± 0.059  ns/op
-// CloneVsNewWithSetters.viaNew    avgt   10   7.617 ± 0.113  ns/op
+// Run complete. Total time: 00:00:58
+// 
+// Benchmark                                  Mode  Cnt  Score   Error  Units
+// CloneVsNewWithSetters.viaClone             avgt    9  4.672 ± 0.261  ns/op
+// CloneVsNewWithSetters.viaCloneConstructor  avgt    9  4.557 ± 0.135  ns/op
+// CloneVsNewWithSetters.viaNew               avgt    9  4.572 ± 0.177  ns/op
 
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
@@ -37,6 +38,15 @@ public class CloneVsNewWithSetters {
         
         bh.consume(result);
         
+    }
+
+    @Benchmark
+    public void viaCloneConstructor(PersonState state, Blackhole bh) {
+
+        Person result = new Person(state.person);
+        
+        bh.consume(result);
+
     }
     
 }

@@ -14,6 +14,12 @@ public class Person implements Cloneable {
     
     public Person() {
     }
+
+    // clone constructor
+    public Person(Person person) {
+        this.name = person.name;
+        this.age = person.age;
+    }
     
     public String getName() {
         return name;

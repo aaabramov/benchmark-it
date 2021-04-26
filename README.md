@@ -1,26 +1,27 @@
 # benchmark-it
-Performance measurements for common code samples ![benchmark-it-build-status](https://travis-ci.org/Abrasha/benchmark-it.svg?branch=feature%2Ftravis-support)
+Performance measurements for common code samples ![benchmark-it-build-status](https://travis-ci.org/aaabramov/benchmark-it.svg?branch=feature%2Ftravis-support)
 
 ## Adding new benchmark
 Find the following official examples of using JMH: [org/openjdk/jmh/samples/](http://hg.openjdk.java.net/code-tools/jmh/file/tip/jmh-samples/src/main/java/org/openjdk/jmh/samples/)
 
-Also you can take a look at my own measurements. The simplest is [StringConcat.java](https://github.com/Abrasha/benchmark-it/blob/master/src/main/java/com/github/abrasha/strings/StringConcat.java). It demonstrates why we actually need classes like `StringBuilder`.
+Also you can take a look at my own measurements. The simplest is [StringConcat.java](https://github.com/aaabramov/benchmark-it/blob/master/src/main/java/com/github/aaabramov/strings/StringConcat.java). It demonstrates why we actually need classes like `StringBuilder`.
 
 
 ## Running benchmarks
 
-Then you can use [run-benchmarks.sh](https://github.com/Abrasha/benchmark-it/blob/master/run-benchmarks.sh) script to execute benchmarks (You need to have maven been installed):
+Then you can use [run-benchmarks.sh](https://github.com/aaabramov/benchmark-it/blob/master/run-benchmarks.sh) script to execute benchmarks (You need to have maven been installed):
 ```bash
-./run-benchmarks.sh "com.github.abrasha.strings.StringConcat"
+./run-benchmarks.sh "com.github.aaabramov.strings.StringConcat"
 ```
 
 ## Existing benchmarks:
 
 Cloning v. creating new objects:
 ```
-Benchmark                       Mode  Cnt   Score   Error  Units
-CloneVsNewWithSetters.viaClone  avgt   10  10.041 ± 0.059  ns/op
-CloneVsNewWithSetters.viaNew    avgt   10   7.617 ± 0.113  ns/op
+Benchmark                                  Mode  Cnt  Score   Error  Units
+CloneVsNewWithSetters.viaClone             avgt    9  4.672 ± 0.261  ns/op
+CloneVsNewWithSetters.viaCloneConstructor  avgt    9  4.557 ± 0.135  ns/op
+CloneVsNewWithSetters.viaNew               avgt    9  4.572 ± 0.177  ns/op
 ```
 
 Reflection v. direct constructor call:
